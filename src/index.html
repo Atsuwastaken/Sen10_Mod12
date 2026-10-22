@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCM Demo Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Software Configuration Management</h1>
+    <p>A static site deployed automatically with GitHub Actions</p>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Pipeline</h2>
+      <ol id="pipeline"></ol>
+    </section>
+    <section class="card">
+      <h2>Click counter</h2>
+      <p>Clicks: <span id="count">0</span></p>
+      <button id="btn" type="button">Click me</button>
+    </section>
+  </main>
+  <footer>
+    <p>Build: <span id="build-info">local</span></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
