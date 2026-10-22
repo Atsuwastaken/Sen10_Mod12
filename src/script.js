@@ -12,7 +12,7 @@ steps.forEach((step) => {
   list.appendChild(li);
 });
 
-let count = 0
+let count = 0;
 const countEl = document.getElementById('count');
 document.getElementById('btn').addEventListener('click', () => {
   count += 1;
