@@ -6,7 +6,7 @@ function getWelcomeMessage(date) {
   if (hour < 12) {
     greeting = 'Good morning';
   } else if (hour < 18) {
-    greeting = 'Good afternoon';
+    greeting = 'Good afternon';
   } else {
     greeting = 'Good evening';
   }
