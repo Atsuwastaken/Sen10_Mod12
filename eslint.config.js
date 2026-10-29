@@ -9,13 +9,17 @@ module.exports = [
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'script',
-      globals: globals.browser
+      globals: { ...globals.browser, module: 'readonly' }
     },
     rules: {
       semi: ['error', 'always'],
       quotes: ['error', 'single'],
       'no-unused-vars': 'error'
     }
+  },
+  {
+    files: ['tests/**/*.js'],
+    languageOptions: { globals: { ...globals.node, ...globals.jest, ...globals.browser } }
   },
   {
     files: ['eslint.config.js'],

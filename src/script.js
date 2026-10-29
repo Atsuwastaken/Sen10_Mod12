@@ -1,6 +1,7 @@
 const steps = [
   'Push to GitHub',
   'Lint JavaScript with ESLint',
+  'Run unit tests with Jest',
   'Package site as Pages artifact',
   'Deploy to GitHub Pages'
 ];

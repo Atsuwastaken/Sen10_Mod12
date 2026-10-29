@@ -2,14 +2,17 @@
   "name": "scm-static-site",
   "version": "1.0.0",
   "private": true,
-  "description": "Static site deployed to GitHub Pages with ESLint quality gate",
+  "description": "Static site deployed to GitHub Pages with ESLint and Jest quality gates",
   "scripts": {
     "lint": "eslint .",
-    "build": "rm -rf dist && mkdir -p dist && cp -r src/. dist/"
+    "build": "rm -rf dist && mkdir -p dist && cp -r src/. dist/",
+    "test": "jest"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
     "eslint": "^9.39.5",
-    "globals": "^15.15.0"
+    "globals": "^15.15.0",
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2"
   }
 }

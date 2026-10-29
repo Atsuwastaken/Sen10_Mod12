@@ -1,4 +1,4 @@
-name: Lint, Package & Deploy to GitHub Pages
+name: Lint, Test, Package & Deploy to GitHub Pages
 
 on:
   push:
@@ -29,9 +29,22 @@ jobs:
       - run: npm ci
       - run: npm run lint
 
+  test:
+    name: Unit tests (Jest)
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm test
+
   build:
     name: Package site
-    needs: lint
+    needs: [lint, test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
